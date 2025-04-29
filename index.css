@@ -497,3 +497,58 @@ footer a{
   
 }
 
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 20px;
+}
+
+.flip-card-front {
+  background-color: #ffffff;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

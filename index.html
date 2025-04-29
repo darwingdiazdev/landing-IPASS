@@ -32,7 +32,61 @@
       align-items: center;
       text-align: center;
     }
+    .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px;
+    cursor: pointer;
+  }
 
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+  }
+
+  .flip-card-front {
+    background-color: #ffffff;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
     </style>
     </head>
    
@@ -111,278 +165,87 @@
               </div>
         </div>
       </section>
-      <!-- Servicios
-      <section id="servicios">
-        <h3 class="titulo-seccion">IPASS</h3>
-        <h4>Brinda soporte,
-          procesa y gestiona
-          cada mes</h4>
-        <div class="fila">
-          <div class="servicio">
-            <span class="icono"><i class="fa-solid fa-code"></i></span>
-            <h4>Desarrollo Web</h4>
-          </div>
-          <div class="servicio">
-            <span class="icono"><i class="fa-solid fa-store"></i></span>
-            <h4>ecommerce</h4>
-          </div>
-          <div class="servicio">
-            <span class="icono"><i class="fa-solid fa-laptop"></i></span>
-            <h4>Single Page Aplication</h4>
-          </div>
-        </div>
-        <div class="fila">
-          <div class="servicio">
-            <span class="icono"><i class="fa-brands fa-react"></i></span>
-            <h4>Desarrollo Frontend</h4>
-          </div>
-          <div class="servicio">
-            <span class="icono"><i class="fa-solid fa-database"></i></span>
-            <h4>Desarrollo Backend</h4>
-          </div>
-          <div class="servicio">
-            <span class="icono"><i class="fa-brands fa-bootstrap"></i></span>
-            <h4>Diseño Web</h4>
-          </div>
-        </div>
-      </section>
-      <--Habilidades-->
-      <!-- <section id="skills" class="skills">
-        <div class="contenido-seccion">
-          <h3 class="titulo-seccion">HABILIDADES</h3>
-          <div class="fila">
-            <div class="col">
-              <h4>Habilidades Técnicas</h4>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>JavaScript</p>
-                  <span class="porcentaje">80%</span>
-                </div>
-                <div class="barra">
-                  <div id="js" class="barra-progreso2"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>HTML</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="html" class="barra-progreso1"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>CSS</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="css" class="barra-progreso5"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>React</p>
-                  <span class="porcentaje">80%</span>
-                </div>
-                <div class="barra">
-                  <div id="react" class="barra-progreso6"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Express</p>
-                  <span class="porcentaje">75%</span>
-                </div>
-                <div class="barra">
-                  <div id="express" class="barra-progreso8"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>PostgresSQL</p>
-                  <span class="porcentaje">75%</span>
-                </div>
-                <div class="barra">
-                  <div id="bd" class="barra-progreso3"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Bootstrap</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="bs" class="barra-progreso4"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Github</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="github" class="barra-progreso7"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Figma</p>
-                  <span class="porcentaje">80%</span>
-                </div>
-                <div class="barra">
-                  <div id="react" class="barra-progreso6"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Scrum</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="scrum" class="barra-progreso9"></div>
-                </div>
-              </div>
-
-            </div> -->
-            <!--Soft Skills-->
-            <!-- <div class="col">
-              <h4>Habilidades Blandas</h4>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Comunicacion</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="comunicacion" class="barra-progreso4"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>trabajo en equipo</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="trabajo" class="barra-progreso4"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Liderazgo</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="liderazgo" class="barra-progreso5"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Pensamiento analitico</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="pensamiento" class="barra-progreso5"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>resolucion de problemas</p>
-                  <span class="porcentaje">85%</span>
-                </div>
-                <div class="barra">
-                  <div id="resolucion" class="barra-progreso5"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Creatividad</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="creatividad" class="barra-progreso9"></div>
-                </div>
-              </div>
-              <div class="skill">
-                <div class="info">
-                  <p><span class="lista"></span>Constancia</p>
-                  <span class="porcentaje">90%</span>
-                </div>
-                <div class="barra">
-                  <div id="constancia" class="barra-progreso9"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
       <!--Portfolio-->
       <section id="portfolio">
         <div class="div-title">
           <img src="images/LOGOSIPASS.png" alt="icono" style="width: 170px; height: 60px;">
           <h4 class="sub-tittle">Brinda soporte, procesa y gestiona cada mes</h4>
         </div>
-        
+      
         <div class="fila">
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>3.2<span class="cantidad1">K</span></h1>
-              <p class="cantidad">RESIDENTES</p>
-              <div class="info">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>3.2<span class="cantidad1">K</span></h1>
+                <p class="cantidad">RESIDENTES</p>
+              </div>
+              <div class="flip-card-back">
                 <p class="inform">Son administrados desde IPASS</p>
-             </div>
-            </div>
-          </div>
-         
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>11<span class="cantidad1">K</span></h1>
-              <p class="cantidad">VISITANTES INVITADOS</p>
-              <div class="info">
-                <p class="inform">Son anunciados para
-                  autorización de
-                  ingreso</p>
               </div>
             </div>
           </div>
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>9<span class="cantidad1">K</span></h1>
-              <p class="cantidad">TICKETS</p>
-              <div class="info">
-                <p class="inform">Provenientes de residentes, son procesador al mes</p>
+      
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>11<span class="cantidad1">K</span></h1>
+                <p class="cantidad">VISITANTES INVITADOS</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="inform">Son anunciados para autorización de ingreso</p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>9<span class="cantidad1">K</span></h1>
+                <p class="cantidad">TICKETS</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="inform">Provenientes de residentes, son procesados al mes</p>
               </div>
             </div>
           </div>
         </div>
+      
         <div class="fila">
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>5<span class="cantidad1">K</span></h1>
-              <p class="cantidad">ACCIONES</p>
-              <div class="info">
-                <p class="inform">Procesadas para el cumplimiento en planes de limpieza,mantenimiento y seguridad</p>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>5<span class="cantidad1">K</span></h1>
+                <p class="cantidad">ACCIONES</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="inform">Procesadas para cumplimiento en limpieza, mantenimiento y seguridad</p>
               </div>
             </div>
           </div>
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>1.7<span class="cantidad1">M</span></h1>
-              <p class="cantidad">QUETZALES</p>
-              <div class="info">
-                <p class="inform">En conciliaciones mensuales por cuotas mantenimiento, mora, multas y reservas</p>
-             </div>
+      
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>1.7<span class="cantidad1">M</span></h1>
+                <p class="cantidad">QUETZALES</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="inform">Conciliaciones mensuales de mantenimiento, mora, multas y reservas</p>
+              </div>
             </div>
           </div>
-          <div class="proyecto">
-            <div class="overlay">
-              <h1>1<span class="cantidad1">K</span></h1>
-              <p class="cantidad">APARTAMENTOS U OFICINAS</p>
-              <div class="info">
-                <p class="inform">Gestionados con sistema IPASS en mas de 10 edificios y residenciales</p>
-             </div>
+      
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1>1<span class="cantidad1">K</span></h1>
+                <p class="cantidad">APARTAMENTOS U OFICINAS</p>
+              </div>
+              <div class="flip-card-back">
+                <p class="inform">Gestionados con IPASS en más de 10 edificios y residenciales</p>
+              </div>
             </div>
           </div>
-         
         </div>
       </section>
       <!--Contacto-->

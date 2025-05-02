@@ -502,7 +502,7 @@ footer a{
   width: 300px;
   height: 200px;
   perspective: 1000px;
-  margin: 20px;
+  margin: 8px 20px;
   cursor: pointer;
 }
 
@@ -512,10 +512,12 @@ footer a{
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+
 }
 
 .flip-card-front, .flip-card-back {
@@ -523,32 +525,60 @@ footer a{
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 10px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  padding: 20px;
+  box-shadow: 5px 4px 5px rgba(129, 127, 127, 0.2);
+  padding: 10px;
+
 }
 
 .flip-card-front {
-  background-color: #ffffff;
+  background-color:rgb(63, 63, 63);
+  h1{
+    font-size: 60px;
+    .cantidad1{
+      color:#5a1fd1;
+    }
+  }
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color:rgb(63, 63, 63);
+ 
   color: white;
   transform: rotateY(180deg);
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   font-size: 16px;
+}
+.cantidad{
+  margin-top: 10px;
+  text-align: center;
 }
 
 .fila {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+  .typed-output {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+  .typed-output {
+    font-size: 1rem;
+  }
 }

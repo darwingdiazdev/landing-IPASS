@@ -532,7 +532,7 @@ footer a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 4px 5px rgba(129, 127, 127, 0.2);
+  /* box-shadow: 5px 4px 5px rgba(129, 127, 127, 0.2); */
   padding: 10px;
 
 }
@@ -579,7 +579,7 @@ footer a{
 /* Responsivo para móviles */
 @media (max-width: 480px) {
   .typed-output {
-    font-size: 12px;
+    font-size: 0.8rem;
     width: 400px;
   }
 }

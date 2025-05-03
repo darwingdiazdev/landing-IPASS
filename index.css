@@ -51,6 +51,8 @@ html{
   background-position: center center ;
   height: 100vh;
   background-color: black;
+  scroll-snap-align: start;
+
 }
 #inicio .contenido header{
   background: linear-gradient(rgba(90, 31, 209, 1), rgba(90, 31, 209, 0.8));
@@ -120,6 +122,8 @@ html{
     justify-content: center; 
     gap: 20px;
     padding: 0 20px;
+    scroll-snap-align: start;
+
   }
   .sobremi{
     width: 100%;
@@ -176,6 +180,8 @@ html{
 #servicios{
   padding: 100px 15px;
   text-align: center;
+  scroll-snap-align: start;
+
 }
 #servicios .titulo-seccion{
   font-size: 22px;
@@ -244,6 +250,9 @@ html{
   width: 100%;
   /* margin:auto; */
   background-color: black;
+
+  scroll-snap-align: start;
+
 }
 #portfolio .titulo-seccion{
   padding-top: 100px;
